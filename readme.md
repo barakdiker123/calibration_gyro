@@ -1,18 +1,20 @@
 
 # Table of Contents
 
-1.  [Caliberation Gyro](#orgfd69543)
-    1.  [Introduction](#org559cedb)
-2.  [Progress Bar <code>[2/3]</code>](#org26b7c7a)
+1.  [Caliberation Gyro](#orgd77b65d)
+    1.  [Introduction](#org06d9555)
+2.  [Examples](#org93002ec)
+3.  [Instructions](#org6169791)
+4.  [Progress Bar <code>[2/3]</code>](#org48f64c5)
 
 
 
-<a id="orgfd69543"></a>
+<a id="orgd77b65d"></a>
 
 # Caliberation Gyro
 
 
-<a id="org559cedb"></a>
+<a id="org06d9555"></a>
 
 ## Introduction
 
@@ -24,7 +26,24 @@ The following algorithms are currently supported
 -   Machine learning methods
 
 
-<a id="org26b7c7a"></a>
+<a id="org93002ec"></a>
+
+# Examples
+
+We want something like this photo
+![img](./example1.png)
+
+
+<a id="org6169791"></a>
+
+# Instructions
+
+For running the algorithms
+
+    python automate.py
+
+
+<a id="org48f64c5"></a>
 
 # Progress Bar <code>[2/3]</code>
 

@@ -6,6 +6,17 @@ The following algorithms are currently supported
 - No Algo
 - Classic Least Square Solution
 - Machine learning methods
+* Examples
+We want something like this photo
+[[./example1.png]]
+
+* Instructions
+For running the algorithms
+#+begin_src bash
+python automate.py
+#+end_src
+
+
 * Progress Bar [2/3]
 Here are the Agenda to do 
 - [X] No Algo 

@@ -1,0 +1,18 @@
+#+title: Caliberating Gyro
+* Caliberation Gyro
+** Introduction
+In this repo we'll compare between Caliberation method
+The following algorithms are currently supported
+- No Algo
+- Classic Least Square Solution
+- Machine learning methods
+* Progress Bar [2/3]
+Here are the Agenda to do 
+- [X] No Algo 
+- [X] Classical Least Square
+- [ ] Machine learning method 
+  
+
+
+
+

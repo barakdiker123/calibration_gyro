@@ -15,18 +15,6 @@ $$
 \tilde{f} = (I_3+S_a+M_a)f+b_a+w_a 
 $$
 
-Where
-\(
-S_a\in diag_{3\times 3}\mathbb{R}\)
-and 
-\(
-M_a\in AntiSymm_{3\times 3}\mathbb{R}
-\)
-and
-\(
-b_a\in \mathbb{R}^3
-\)
-
 Note the following derivation
 
 $$
@@ -53,47 +41,14 @@ f_{3\times 1 } \\ 1
 \end{pmatrix}
 \]
 
-For example, Estimating left column of M with down x direction measurements
 
-$$
-\tilde{f}_{down}^x-
-\begin{pmatrix}
--g \\ 0 \\ 0 
-\end{pmatrix} = M
-\begin{pmatrix}
--g \\ 0 \\ 0 \\ 1
-\end{pmatrix}
-$$
-
-
-We can concate all the vector equations together and we'll infer the following matrix equation
-
-$$
-\begin{pmatrix}
-\tilde{f}_{down}^{x} & \tilde{f}_{x}^{up} & \cdots & \tilde{f}_{up}^{z} 
-\end{pmatrix}
--
-\begin{pmatrix}
--g & g  & 0 & 0 & 0 &   0 \\
-0 & 0 & -g & g & 0  & 0 \\
-0 & 0 & 0 & 0  & -g & g
-\end{pmatrix}
-=M
-\begin{pmatrix}
--g & g  &  0 & 0 & 0 & 0 \\ 
-0 & 0  &  -g & g & 0  & 0 \\ 
-0 & 0  &  0 & 0 & -g  & g \\ 
-1 & 1 &  1 & 1 & 1 &1 \\ 
-\end{pmatrix}
-$$
-
-I'll denote the matrix \( A \in \mathbb{R}^{4\times 6 }\) like so 
+I'll denote the matrix \( A \in \mathbb{R}^{4\times 6 }\) where \( \omega \) like so 
 
 \[
 A_{4\times 6}=\begin{pmatrix}
--g & g  &  0 & 0 & 0 & 0 \\ 
-0 & 0  &  -g & g & 0  & 0 \\ 
-0 & 0  &  0 & 0 & -g  & g \\ 
+-\omega & \omega  &  0 & 0 & 0 & 0 \\ 
+0 & 0  &  -\omega & \omega & 0  & 0 \\ 
+0 & 0  &  0 & 0 & -\omega  & \omega \\ 
 1 & 1 &  1 & 1 & 1 &1 \\ 
 \end{pmatrix}
 \]

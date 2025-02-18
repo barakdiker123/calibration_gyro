@@ -1,22 +1,22 @@
 
 # Table of Contents
 
-1.  [Caliberation Gyro](#orgcd1d3df)
-    1.  [Introduction](#orgc3ec502)
-    2.  [Classical Least Square](#org8b542c8)
-2.  [Examples](#org12fda75)
-3.  [Instructions](#org4b029a4)
-4.  [Progress Bar <code>[3/3]</code>](#org9087410)
-5.  [Big Problem other axis](#orgf7122e5)
+1.  [Caliberation Gyro](#org2b408a3)
+    1.  [Introduction](#org1465cd8)
+    2.  [Classical Least Square](#org49ea488)
+2.  [Examples](#org35a0e55)
+3.  [Instructions](#orga236232)
+4.  [Progress Bar <code>[3/3]</code>](#org198f6ae)
+5.  [Big Problem other axis](#org5caa8db)
 
 
 
-<a id="orgcd1d3df"></a>
+<a id="org2b408a3"></a>
 
 # Caliberation Gyro
 
 
-<a id="orgc3ec502"></a>
+<a id="org1465cd8"></a>
 
 ## Introduction
 
@@ -28,7 +28,7 @@ The following algorithms are currently supported
 -   Machine learning methods
 
 
-<a id="org8b542c8"></a>
+<a id="org49ea488"></a>
 
 ## Classical Least Square
 
@@ -44,31 +44,7 @@ $$
 \tilde{f}-f = (S_a+M_a)f+b_a
 $$
 
-Concating the following matrices would generate the following matrix 
-
-$$
-M<sub>3&times; 4</sub>=
-\left[
-
-\begin{array}{c | c}
-M_a+S_a & b_a
-\end{array}
-
-\right]
-$$
-
-Given that $ M_{3\times 4} $ matrix we can simplify equation [6](#org3adee00) to be
-
-\\[
-~{f} - f<sub>3&times; 1 </sub> = M<sub>3&times; 4</sub>
-
-\begin{pmatrix}
-f_{3\times 1 } \\ 1 
-\end{pmatrix}
-
-\\]
-
-I&rsquo;ll denote the matrix $ A \in \mathbb{R}^{4\times 6 }$ where $ \omega $ like so 
+I&rsquo;ll denote the matrix $A \in \mathbb{R}^{4\times 6 }$ where $\omega$ like so 
 
 $$
 A_{4\times 6}=\begin{pmatrix}
@@ -93,7 +69,7 @@ $$
 z_{3\times 6}A^{T}(AA^{T})^{-1}=M_{3\times 4 }
 $$
 
-Equation [20](#orgd8a687b) gives us the best $M$ matrix for a given measurement
+Equation [14](#org9a3bc0e) gives us the best $M$ matrix for a given measurement
 so our estimator is an **Unbiased estimator**, so for simple calculation we&rsquo;ll have
 
 $$
@@ -103,7 +79,7 @@ $$
 The Classical Caliberation method uses the formula from the lectures
 
 
-<a id="org12fda75"></a>
+<a id="org35a0e55"></a>
 
 # Examples
 
@@ -111,7 +87,7 @@ We want something like this photo
 ![img](./example1.png)
 
 
-<a id="org4b029a4"></a>
+<a id="orga236232"></a>
 
 # Instructions
 
@@ -124,7 +100,7 @@ The same result can be achieved even easily with
     python simple_api.py
 
 
-<a id="org9087410"></a>
+<a id="org198f6ae"></a>
 
 # Progress Bar <code>[3/3]</code>
 
@@ -135,7 +111,7 @@ Here are the Agenda to do
 -   [X] Machine learning method
 
 
-<a id="orgf7122e5"></a>
+<a id="org5caa8db"></a>
 
 # Big Problem other axis
 

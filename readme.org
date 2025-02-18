@@ -21,28 +21,8 @@ $$
 \tilde{f}-f = (S_a+M_a)f+b_a
 $$
 
-Concating the following matrices would generate the following matrix 
 
-$$
-M_{3\times 4}=
-\left[
-\begin{array}{c | c}
-M_a+S_a & b_a
-\end{array}
-\right]
-$$
-
-Given that \( M_{3\times 4} \) matrix we can simplify equation [[equ:1]] to be
-
-\[
-\tilde{f} - f_{3\times 1 } = M_{3\times 4}
-\begin{pmatrix}
-f_{3\times 1 } \\ 1 
-\end{pmatrix}
-\]
-
-
-I'll denote the matrix \( A \in \mathbb{R}^{4\times 6 }\) where \( \omega \) like so 
+I'll denote the matrix \(A \in \mathbb{R}^{4\times 6 }\) where \(\omega\) like so 
 
 \[
 A_{4\times 6}=\begin{pmatrix}

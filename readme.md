@@ -1,22 +1,22 @@
 
 # Table of Contents
 
-1.  [Caliberation Gyro](#org8b4cef8)
-    1.  [Introduction](#org0590ef9)
-    2.  [Classical Least Square](#org824c329)
-2.  [Examples](#orgc54e64a)
-3.  [Instructions](#org59330f7)
-4.  [Progress Bar <code>[3/3]</code>](#org745a127)
-5.  [Big Problem other axis](#org4d12913)
+1.  [Caliberation Gyro](#orge04af8e)
+    1.  [Introduction](#orgaa32f9e)
+    2.  [Classical Least Square](#org8fff87a)
+2.  [Examples](#orgde90297)
+3.  [Instructions](#org35f2855)
+4.  [Progress Bar <code>[3/3]</code>](#orgb66a86f)
+5.  [Big Problem other axis](#org8515171)
 
 
 
-<a id="org8b4cef8"></a>
+<a id="orge04af8e"></a>
 
 # Caliberation Gyro
 
 
-<a id="org0590ef9"></a>
+<a id="orgaa32f9e"></a>
 
 ## Introduction
 
@@ -28,7 +28,7 @@ The following algorithms are currently supported
 -   Machine learning methods
 
 
-<a id="org824c329"></a>
+<a id="org8fff87a"></a>
 
 ## Classical Least Square
 
@@ -37,6 +37,7 @@ Our model of errors is
 $$
 \tilde{f} = (I_3+S_a+M_a)f+b_a+w_a 
 $$
+
 Where
 $
 S_a\in diag_{3\times 3}\mathbb{R}$
@@ -57,7 +58,7 @@ $$
 
 Concating the following matrices would generate the following matrix 
 
-\\[
+$$
 M<sub>3&times; 4</sub>=
 \left[
 
@@ -66,9 +67,9 @@ M_a+S_a & b_a
 \end{array}
 
 \right]
-\\]
+$$
 
-Given that $ M_{3\times 4} $ matrix we can simplify equation [6](#org15c690c) to be
+Given that $ M_{3\times 4} $ matrix we can simplify equation [6](#orgae859a9) to be
 
 \\[
 ~{f} - f<sub>3&times; 1 </sub> = M<sub>3&times; 4</sub>
@@ -81,7 +82,7 @@ f_{3\times 1 } \\ 1
 
 For example, Estimating left column of M with down x direction measurements
 
-\\[
+$$
 ~{f}<sub>down</sub><sup>x</sup>-
 
 \begin{pmatrix}
@@ -91,11 +92,11 @@ For example, Estimating left column of M with down x direction measurements
 -g \\ 0 \\ 0 \\ 1
 \end{pmatrix}
 
-\\]
+$$
 
 We can concate all the vector equations together and we&rsquo;ll infer the following matrix equation
 
-\\[
+$$
 
 \begin{pmatrix}
 \tilde{f}_{down}^{x} & \tilde{f}_{x}^{up} & \cdots & \tilde{f}_{up}^{z} 
@@ -118,7 +119,7 @@ We can concate all the vector equations together and we&rsquo;ll infer the follo
 1 & 1 &  1 & 1 & 1 &1 \\ 
 \end{pmatrix}
 
-\\]
+$$
 
 I&rsquo;ll denote the matrix $ A \in \mathbb{R}^{4\times 6 }$ like so 
 
@@ -145,7 +146,7 @@ $$
 z_{3\times 6}A^{T}(AA^{T})^{-1}=M_{3\times 4 }
 $$
 
-Equation [27](#orga16e22c) gives us the best $M$ matrix for a given measurement
+Equation [28](#orged8a450) gives us the best $M$ matrix for a given measurement
 so our estimator is an **Unbiased estimator**, so for simple calculation we&rsquo;ll have
 
 $$
@@ -155,7 +156,7 @@ $$
 The Classical Caliberation method uses the formula from the lectures
 
 
-<a id="orgc54e64a"></a>
+<a id="orgde90297"></a>
 
 # Examples
 
@@ -163,7 +164,7 @@ We want something like this photo
 ![img](./example1.png)
 
 
-<a id="org59330f7"></a>
+<a id="org35f2855"></a>
 
 # Instructions
 
@@ -176,7 +177,7 @@ The same result can be achieved even easily with
     python simple_api.py
 
 
-<a id="org745a127"></a>
+<a id="orgb66a86f"></a>
 
 # Progress Bar <code>[3/3]</code>
 
@@ -187,7 +188,7 @@ Here are the Agenda to do
 -   [X] Machine learning method
 
 
-<a id="org4d12913"></a>
+<a id="org8515171"></a>
 
 # Big Problem other axis
 

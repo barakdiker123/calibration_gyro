@@ -9,10 +9,12 @@ The following algorithms are currently supported
 ** Classical Least Square 
  
 Our model of errors is
+
 #+LABEL: equ:1
-\[
+$$
 \tilde{f} = (I_3+S_a+M_a)f+b_a+w_a 
-\]
+$$
+
 Where
 \(
 S_a\in diag_{3\times 3}\mathbb{R}\)
@@ -27,20 +29,20 @@ b_a\in \mathbb{R}^3
 
 Note the following derivation
 
-\[
+$$
 \tilde{f}-f = (S_a+M_a)f+b_a
-\]
+$$
 
 Concating the following matrices would generate the following matrix 
 
-\[
+$$
 M_{3\times 4}=
 \left[
 \begin{array}{c | c}
 M_a+S_a & b_a
 \end{array}
 \right]
-\]
+$$
 
 Given that \( M_{3\times 4} \) matrix we can simplify equation [[equ:1]] to be
 
@@ -53,7 +55,7 @@ f_{3\times 1 } \\ 1
 
 For example, Estimating left column of M with down x direction measurements
 
-\[
+$$
 \tilde{f}_{down}^x-
 \begin{pmatrix}
 -g \\ 0 \\ 0 
@@ -61,12 +63,12 @@ For example, Estimating left column of M with down x direction measurements
 \begin{pmatrix}
 -g \\ 0 \\ 0 \\ 1
 \end{pmatrix}
-\]
+$$
 
 
 We can concate all the vector equations together and we'll infer the following matrix equation
 
-\[
+$$
 \begin{pmatrix}
 \tilde{f}_{down}^{x} & \tilde{f}_{x}^{up} & \cdots & \tilde{f}_{up}^{z} 
 \end{pmatrix}
@@ -83,7 +85,7 @@ We can concate all the vector equations together and we'll infer the following m
 0 & 0  &  0 & 0 & -g  & g \\ 
 1 & 1 &  1 & 1 & 1 &1 \\ 
 \end{pmatrix}
-\]
+$$
 
 I'll denote the matrix \( A \in \mathbb{R}^{4\times 6 }\) like so 
 

@@ -14,12 +14,15 @@ Our model of errors is
 \tilde{f} = (I_3+S_a+M_a)f+b_a+w_a 
 \]
 Where
-\(S_a\in diag_{3\times 3}\mathbb{R}\)
+\(
+S_a\in diag_{3\times 3}\mathbb{R}\)
 and 
-\(M_a\in AntiSymm_{3\times 3}\mathbb{R}
+\(
+M_a\in AntiSymm_{3\times 3}\mathbb{R}
 \)
 and
-\(b_a\in \mathbb{R}^3
+\(
+b_a\in \mathbb{R}^3
 \)
 
 Note the following derivation
@@ -27,7 +30,9 @@ Note the following derivation
 \[
 \tilde{f}-f = (S_a+M_a)f+b_a
 \]
+
 Concating the following matrices would generate the following matrix 
+
 \[
 M_{3\times 4}=
 \left[
@@ -37,7 +42,7 @@ M_a+S_a & b_a
 \right]
 \]
 
-Given that \( M_{3\times 4}\) matrix we can simplify equation [[equ:1]] to be
+Given that \( M_{3\times 4} \) matrix we can simplify equation [[equ:1]] to be
 
 \[
 \tilde{f} - f_{3\times 1 } = M_{3\times 4}
@@ -47,6 +52,7 @@ f_{3\times 1 } \\ 1
 \]
 
 For example, Estimating left column of M with down x direction measurements
+
 \[
 \tilde{f}_{down}^x-
 \begin{pmatrix}

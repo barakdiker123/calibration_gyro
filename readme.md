@@ -1,22 +1,22 @@
 
 # Table of Contents
 
-1.  [Caliberation Gyro](#org9dfe3e2)
-    1.  [Introduction](#org7958ecf)
-    2.  [Classical Least Square](#orgf0ddad2)
-2.  [Examples](#org9e28ceb)
-3.  [Instructions](#org931bb9e)
-4.  [Progress Bar <code>[3/3]</code>](#org6fd34b3)
-5.  [Big Problem other axis](#org04e72b2)
+1.  [Caliberation Gyro](#org8b4cef8)
+    1.  [Introduction](#org0590ef9)
+    2.  [Classical Least Square](#org824c329)
+2.  [Examples](#orgc54e64a)
+3.  [Instructions](#org59330f7)
+4.  [Progress Bar <code>[3/3]</code>](#org745a127)
+5.  [Big Problem other axis](#org4d12913)
 
 
 
-<a id="org9dfe3e2"></a>
+<a id="org8b4cef8"></a>
 
 # Caliberation Gyro
 
 
-<a id="org7958ecf"></a>
+<a id="org0590ef9"></a>
 
 ## Introduction
 
@@ -28,7 +28,7 @@ The following algorithms are currently supported
 -   Machine learning methods
 
 
-<a id="orgf0ddad2"></a>
+<a id="org824c329"></a>
 
 ## Classical Least Square
 
@@ -38,12 +38,15 @@ $$
 \tilde{f} = (I_3+S_a+M_a)f+b_a+w_a 
 $$
 Where
-$S_a\in diag_{3\times 3}\mathbb{R}$
+$
+S_a\in diag_{3\times 3}\mathbb{R}$
 and 
-$M_a\in AntiSymm_{3\times 3}\mathbb{R}
+$
+M_a\in AntiSymm_{3\times 3}\mathbb{R}
 $
 and
-$b_a\in \mathbb{R}^3
+$
+b_a\in \mathbb{R}^3
 $
 
 Note the following derivation
@@ -51,7 +54,9 @@ Note the following derivation
 $$
 \tilde{f}-f = (S_a+M_a)f+b_a
 $$
+
 Concating the following matrices would generate the following matrix 
+
 \\[
 M<sub>3&times; 4</sub>=
 \left[
@@ -63,7 +68,7 @@ M_a+S_a & b_a
 \right]
 \\]
 
-Given that $ M_{3\times 4}$ matrix we can simplify equation [6](#orgcbf892f) to be
+Given that $ M_{3\times 4} $ matrix we can simplify equation [6](#org15c690c) to be
 
 \\[
 ~{f} - f<sub>3&times; 1 </sub> = M<sub>3&times; 4</sub>
@@ -75,6 +80,7 @@ f_{3\times 1 } \\ 1
 \\]
 
 For example, Estimating left column of M with down x direction measurements
+
 \\[
 ~{f}<sub>down</sub><sup>x</sup>-
 
@@ -139,7 +145,7 @@ $$
 z_{3\times 6}A^{T}(AA^{T})^{-1}=M_{3\times 4 }
 $$
 
-Equation [24](#orgf290beb) gives us the best $M$ matrix for a given measurement
+Equation [27](#orga16e22c) gives us the best $M$ matrix for a given measurement
 so our estimator is an **Unbiased estimator**, so for simple calculation we&rsquo;ll have
 
 $$
@@ -149,7 +155,7 @@ $$
 The Classical Caliberation method uses the formula from the lectures
 
 
-<a id="org9e28ceb"></a>
+<a id="orgc54e64a"></a>
 
 # Examples
 
@@ -157,7 +163,7 @@ We want something like this photo
 ![img](./example1.png)
 
 
-<a id="org931bb9e"></a>
+<a id="org59330f7"></a>
 
 # Instructions
 
@@ -170,7 +176,7 @@ The same result can be achieved even easily with
     python simple_api.py
 
 
-<a id="org6fd34b3"></a>
+<a id="org745a127"></a>
 
 # Progress Bar <code>[3/3]</code>
 
@@ -181,7 +187,7 @@ Here are the Agenda to do
 -   [X] Machine learning method
 
 
-<a id="org04e72b2"></a>
+<a id="org4d12913"></a>
 
 # Big Problem other axis
 
